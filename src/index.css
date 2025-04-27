@@ -10,6 +10,7 @@
   --font-Source_Sans_Pro: 'Source Sans 3', sans-serif;
   --color-primary1: rgba(26, 27, 42, 0.4);
   --color-primary2: #ff5e3a;
+  --color-primary3: #232639;
 }
 
 @utility container {
