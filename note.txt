@@ -1,0 +1,4 @@
+react poject cretate 
+tailwind css intigret
+shadch install
+font fammeay  ; Roboto Condensed , inter , Source Sans Pro
