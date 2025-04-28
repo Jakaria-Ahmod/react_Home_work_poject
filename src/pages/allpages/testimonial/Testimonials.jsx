@@ -2,6 +2,8 @@ import React from 'react';
 import { testidata } from './Testimonialsdata';
 import { FaStar } from 'react-icons/fa';
 import tesit from '../../../assets/img/testi.jpg';
+import shep from '../../../assets/img/serviceShep.png';
+import aboutimgshep from '../../../assets/img/aboutimgshep.png';
 
 const Testimonials = () => {
   return (
@@ -30,7 +32,17 @@ const Testimonials = () => {
                   a sapien. Aenean purus nunc, cursus in ante in, vehicula
                   facilisis dui. Integer consequat consectetur est id
                 </p>
+                <div className="relative">
+                  <div className="absolute top-[-280px] left-[-300px]">
+                    <img src={shep} alt="" />
+                  </div>
+                </div>
                 <div className=" flex gap-[30px] mt-[30px]">
+                  <div className="relative">
+                    <div className="absolute bottom-[0px] right-[-1185px] z-10">
+                      <img src={aboutimgshep} alt="img" />
+                    </div>
+                  </div>
                   {testidata.map((item, index) => (
                     <div className="w-[435px] p-[30px] bg-white rounded-[5px] z-20">
                       <div>

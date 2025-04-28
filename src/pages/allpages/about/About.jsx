@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutImg from '../../../assets/img/aboutimg.jpg';
+import aboutshep from '../../../assets/img/aboutimgshep.png';
 
 const About = () => {
   return (
@@ -23,6 +24,11 @@ const About = () => {
                 Dedicated to bringing creative and compelling stories to life on
                 screen
               </strong>
+              <div className="relative">
+                <div className="absolute bottom-[-210px] right-[-620px] z-20 ">
+                  <img src={aboutshep} alt="" />
+                </div>
+              </div>
               <p className="font-Inter text-[16px] font-normal leading-[24px] text-[#82869A] max-w-[600px] mt-[30px] mb-[30px]">
                 Proin et magna blandit arcu pellentesque scelerisque sit amet a
                 sapien. Aenean purus nunc, cursus in ante in, vehicula facilisis

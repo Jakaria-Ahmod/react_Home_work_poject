@@ -1,6 +1,7 @@
 import React from 'react';
 import { barndimg } from './BrandsData';
 import partnerBannerImg from '../../../assets/img/pratnerbanner.jfif';
+import pratnershep from '../../../assets/img/partnershep.png';
 
 const Brands = () => {
   return (
@@ -12,7 +13,7 @@ const Brands = () => {
               <div className="w-[40px] h-[1px] bg-primary2"></div>
               <div>
                 <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                  About Us
+                  partners
                 </span>
               </div>
             </div>
@@ -26,6 +27,11 @@ const Brands = () => {
                 <img src={item.img} alt="" />
               </div>
             ))}
+          </div>
+          <div className="relative">
+            <div className="absolute top-0 start-0">
+              <img src={pratnershep} alt="" />
+            </div>
           </div>
           <div>
             <div className="w-[1170px] h-[500px]">
@@ -42,7 +48,7 @@ const Brands = () => {
                     <div className="w-[40px] h-[1px] bg-primary2"></div>
                     <div>
                       <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                        About Us
+                        directors
                       </span>
                     </div>
                   </div>

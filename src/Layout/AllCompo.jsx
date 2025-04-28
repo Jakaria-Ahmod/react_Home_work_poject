@@ -7,6 +7,7 @@ import Service from '@/pages/allpages/service/Service';
 import Works from '@/pages/allpages/works/Works';
 import React from 'react';
 import Blog from '@/pages/allpages/blog/Blog';
+import Collaborations from '@/pages/allpages/collaborations/Collaborations';
 
 const AllCompo = () => {
   return (
@@ -19,6 +20,7 @@ const AllCompo = () => {
       <Service></Service>
       <Testimonials></Testimonials>
       <Blog></Blog>
+      <Collaborations></Collaborations>
     </div>
   );
 };

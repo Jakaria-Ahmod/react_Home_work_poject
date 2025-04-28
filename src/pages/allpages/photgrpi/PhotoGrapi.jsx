@@ -1,5 +1,6 @@
 import React from 'react';
 import photGrpiImg from '../../../assets/img/photogrpiimg.jpg';
+import partnershep from '../../../assets/img/partnershep.png';
 
 const PhotoGrapi = () => {
   return (
@@ -14,13 +15,18 @@ const PhotoGrapi = () => {
                   alt="img"
                   className="w-full h-full object-cover"
                 />
+                <div className="relative">
+                  <div className="absolute bottom-0 left-0">
+                    <img src={partnershep} alt="img" />
+                  </div>
+                </div>
               </div>
               <div>
                 <div className="flex items-center gap-x-3.5">
                   <div className="w-[40px] h-[1px] bg-primary2"></div>
                   <div>
                     <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                      About Us
+                      Our Cinematography
                     </span>
                   </div>
                 </div>
