@@ -15,11 +15,17 @@ const Acoridon = () => {
           <div>
             <div>
               <Accordion type="single" collapsible>
-                <AccordionItem value="item-1" className="mb-[17px]">
+                <AccordionItem
+                  value="item-1"
+                  className="mb-[17px] hover:no-underline"
+                >
                   <AccordionTrigger className="text-white border-0 font-Roboto_Condensed text-[36px] font-bold leading-[40px]">
                     What is film production?
                   </AccordionTrigger>
-                  <AccordionContent className="text-primary4 border-0 text-base font-normal leading-[24px] font-Inter">
+                  <AccordionContent
+                    hover:no-underline
+                    className="text-primary4 border-0 text-base font-normal leading-[24px] font-Inter"
+                  >
                     Lorem ipsum dolor sit amet consectetur. Ipsum lectus
                     sollicitudin faucibus sodales proin neque tincidunt
                     venenatis vitae maecenas pulvinar sodales porta. Aliquet

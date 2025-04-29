@@ -32,7 +32,10 @@ const Service = () => {
 
           <div className="grid grid-cols-3 gap-[30px]">
             {serivcedata.map((item, index) => (
-              <div className="w-[370px] h-[400px] rounded-[5px] overflow-hidden">
+              <div
+                key={index}
+                className="w-[370px] transform transition-transform duration-300 hover:scale-105 h-[400px] rounded-[5px] overflow-hidden"
+              >
                 <img
                   src={item.img}
                   alt="img"

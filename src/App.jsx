@@ -15,6 +15,8 @@ import Pricing from './pages/components/Pricing/Pricing';
 import Acoridon from './pages/components/Acoridon/Acoridon';
 import Blog from './pages/allpages/blog/Blog';
 import Contact from './pages/components/Contact/Contact';
+import Error from './pages/components/Error/Error';
+import 'swiper/css';
 
 function App() {
   const router = createBrowserRouter(
@@ -28,6 +30,7 @@ function App() {
         <Route path="/fqa" element={<Acoridon></Acoridon>}></Route>
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/404" element={<Contact></Contact>}></Route>
+        <Route path="*" element={<Error></Error>}></Route>
         <Route
           path="/testimonials"
           element={<TestimonialCompo></TestimonialCompo>}

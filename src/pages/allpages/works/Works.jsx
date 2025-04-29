@@ -1,5 +1,6 @@
 import React from 'react';
 import { workdata } from './WorksData';
+import { Link } from 'react-router';
 
 const Works = () => {
   return (
@@ -13,7 +14,7 @@ const Works = () => {
                 <div className="w-[40px] h-[1px] bg-primary2"></div>
                 <div>
                   <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                    About Us
+                    works
                   </span>
                 </div>
               </div>
@@ -26,15 +27,18 @@ const Works = () => {
               </p>
             </div>
             <div>
-              <button className="py-[17px] px-[25px] bg-primary2 text-white text-[14px] font-bold uppercase font-Roboto_Condensed cursor-pointer">
-                Get started
-              </button>
+              <Link
+                to="/works"
+                className="py-[17px] px-[25px] bg-primary2 text-white text-[14px] font-bold uppercase font-Roboto_Condensed cursor-pointer"
+              >
+                View all works
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-[30px] mt-[50px] rounded-[5px] overflow-hidden">
             {workdata.map((item, index) => (
               <div key={index}>
-                <div>
+                <div className="transform transition-transform duration-300 hover:scale-105">
                   <div>
                     <div className="w-[570px] h-[321px]">
                       <img

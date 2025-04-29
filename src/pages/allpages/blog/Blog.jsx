@@ -1,6 +1,13 @@
 import React from 'react';
 import { blogData } from './BlogData';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
 const Blog = () => {
   return (
     <div className="bg-primary3 pt-[50px] pb-[100px]">
@@ -29,30 +36,45 @@ const Blog = () => {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-x-[30px]">
-              {blogData.map((item, index) => (
-                <div className="w-[258px]">
-                  <div
-                    className="w-[258px] h-[258px] rounded-[5px] overflow-hidden"
-                    key={index}
-                  >
-                    <img
-                      src={item.img}
-                      alt="img"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-Roboto_Condensed text-[24px] font-bold text-white leading-[30px] mt-[20px] mb-[10px]">
-                      {item.title}
-                    </h3>
-                    <p className="font-Inter text-base font-normal text-primary4 leading-[24px]">
-                      {item.date}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+            >
+              <div className="grid grid-cols-3 gap-x-[30px]">
+                {blogData.map((item, index) => (
+                  <SwiperSlide>
+                    <div className="w-[258px]">
+                      <div
+                        className="w-[258px] h-[258px] rounded-[5px] overflow-hidden"
+                        key={index}
+                      >
+                        <img
+                          src={item.img}
+                          alt="img"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <h3 className="font-Roboto_Condensed text-[24px] font-bold text-white leading-[30px] mt-[20px] mb-[10px]">
+                          {item.title}
+                        </h3>
+                        <p className="font-Inter text-base font-normal text-primary4 leading-[24px]">
+                          {item.date}
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </div>
+            </Swiper>
           </div>
         </section>
       </div>

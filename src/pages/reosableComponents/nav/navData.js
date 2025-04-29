@@ -17,7 +17,6 @@ export const menuItem = [
   },
   {
     name: 'pages',
-    path: '/pages',
     drop: [
       {
         name: 'testimonials',

@@ -43,7 +43,7 @@ const About = () => {
             </div>
             <div>
               <div className="relative">
-                <div className="absolute top-[-160px] left-0 w-[570px] h-[700px] bg-amber-600">
+                <div className="absolute top-[-160px] left-0 w-[570px] h-[700px] rounded-[5px] overflow-hidden bg-amber-600">
                   <img
                     src={aboutImg}
                     alt="img"

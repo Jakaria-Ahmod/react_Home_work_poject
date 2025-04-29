@@ -1,6 +1,7 @@
 export const pricingCardData = [
   {
     name: 'Basic',
+    buttonText: 'Not Recommended',
     title: 'the production company charges a fixed',
     money: '$1,200',
     moneyTitle: '/per project',
@@ -42,6 +43,7 @@ export const pricingCardData = [
   },
   {
     name: 'Pro',
+    buttonText: 'Recommended',
     title: 'the production company charges a fixed',
     money: 'Custom Quote',
     plane: 'custom quote',

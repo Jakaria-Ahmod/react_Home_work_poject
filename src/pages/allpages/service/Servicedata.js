@@ -1,7 +1,9 @@
-import indianImg1 from '../../../assets/img/tv.jpg';
 import indianImg2 from '../../../assets/img/indian.webp';
 import indianImg3 from '../../../assets/img/Documentary.jfif';
 import indianImg4 from '../../../assets/img/CompanyProfile.jpg';
+import indianImg5 from '../../../assets/img/movie1.jfif';
+import indianImg6 from '../../../assets/img/movie2.jfif';
+import indianImg1 from '../../../assets/img/movie10.jfif';
 
 export const serivcedata = [
   {
@@ -25,12 +27,12 @@ export const serivcedata = [
     title: 'Proin et magna blandit arcu pellent esque sceleri bandio wasikolo.',
   },
   {
-    img: indianImg1,
+    img: indianImg5,
     movieName: 'Movie Production',
     title: 'Proin et magna blandit arcu pellent esque sceleri bandio wasikolo.',
   },
   {
-    img: indianImg2,
+    img: indianImg6,
     movieName: 'Movie Production',
     title: 'Proin et magna blandit arcu pellent esque sceleri bandio wasikolo.',
   },
