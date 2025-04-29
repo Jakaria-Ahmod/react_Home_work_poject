@@ -7,9 +7,15 @@ import aboutshep from '../../../src/assets/img/aboutimgshep.png';
 import PhotoGrapi from '../allpages/photgrpi/PhotoGrapi';
 import Collaborations from '../allpages/collaborations/Collaborations';
 import Testimonials from '../allpages/testimonial/Testimonials';
+import { motion } from 'motion/react';
 const AboutCompo = () => {
   return (
-    <div className="">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className=""
+    >
       <section className="">
         <AboutHedar></AboutHedar>
         <div>
@@ -17,7 +23,11 @@ const AboutCompo = () => {
             <div className="pt-[100px] pb-[94px]">
               <section className="container">
                 <div className="grid grid-cols-2 gap-[50px]">
-                  <div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <div className="flex items-center gap-x-3.5">
                       <div className="w-[40px] h-[1px] bg-primary2"></div>
                       <div>
@@ -57,8 +67,12 @@ const AboutCompo = () => {
                       amet a sapien. Aenean purus nunc, cursus in ante in,
                       vehicula facilisis dui.
                     </p>
-                  </div>
-                  <div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <div className="">
                       <div className=" w-[570px] h-[770px] bg-amber-600">
                         <img
@@ -68,7 +82,7 @@ const AboutCompo = () => {
                         />
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </section>
             </div>
@@ -78,7 +92,7 @@ const AboutCompo = () => {
         <Collaborations></Collaborations>
         <Testimonials> </Testimonials>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

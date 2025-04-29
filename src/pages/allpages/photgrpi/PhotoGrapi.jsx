@@ -1,7 +1,7 @@
 import React from 'react';
 import photGrpiImg from '../../../assets/img/photogrpiimg.jpg';
 import partnershep from '../../../assets/img/partnershep.png';
-
+import { motion } from 'motion/react';
 const PhotoGrapi = () => {
   return (
     <div className="bg-primary3 pb-[100px]">
@@ -9,7 +9,12 @@ const PhotoGrapi = () => {
         <section className="container">
           <div>
             <div className="grid grid-cols-2 pt-[100px] gap-[50px]">
-              <div className="w-[550px] h-[536px] rounded-[5px] overflow-hidden">
+              <motion.div
+                className="w-[550px] h-[536px] rounded-[5px] overflow-hidden"
+                initial={{ opacity: 0, x: -200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <img
                   src={photGrpiImg}
                   alt="img"
@@ -20,8 +25,12 @@ const PhotoGrapi = () => {
                     <img src={partnershep} alt="img" />
                   </div>
                 </div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 200 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <div className="flex items-center gap-x-3.5">
                   <div className="w-[40px] h-[1px] bg-primary2"></div>
                   <div>
@@ -49,7 +58,7 @@ const PhotoGrapi = () => {
                     Get started
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

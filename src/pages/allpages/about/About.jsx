@@ -1,14 +1,18 @@
 import React from 'react';
 import aboutImg from '../../../assets/img/aboutimg.jpg';
 import aboutshep from '../../../assets/img/aboutimgshep.png';
-
+import { motion } from 'motion/react';
 const About = () => {
   return (
     <div className="bg-primary3">
       <div className="pt-[100px] pb-[94px]">
         <section className="container">
           <div className="grid grid-cols-2 gap-[50px]">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="flex items-center gap-x-3.5">
                 <div className="w-[40px] h-[1px] bg-primary2"></div>
                 <div>
@@ -40,8 +44,12 @@ const About = () => {
                   learn more
                 </button>
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <div className="relative">
                 <div className="absolute top-[-160px] left-0 w-[570px] h-[700px] rounded-[5px] overflow-hidden bg-amber-600">
                   <img
@@ -51,7 +59,7 @@ const About = () => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>
