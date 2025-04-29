@@ -23,7 +23,7 @@ const ServiceCom = () => {
                   </div>
                 </div>
                 <h2 className="text-center font-Roboto_Condensed text-[96px] font-bold leading-[101px] text-white">
-                  About
+                  Our Services
                 </h2>
                 <div className="flex items-center justify-center gap-x-[20px] mt-[20px]">
                   <Link to="/">
@@ -54,7 +54,7 @@ const ServiceCom = () => {
                   <div className="w-[40px] h-[1px] bg-primary2"></div>
                   <div>
                     <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                      About Us
+                      Services
                     </span>
                   </div>
                 </div>

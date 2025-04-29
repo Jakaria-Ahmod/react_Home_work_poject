@@ -3,7 +3,7 @@ import { blogData } from './BlogData';
 
 const Blog = () => {
   return (
-    <div className="bg-primary3 pb-[100px]">
+    <div className="bg-primary3 pt-[50px] pb-[100px]">
       <div className="container">
         <section>
           <div className="flex gap-x-[50px]">

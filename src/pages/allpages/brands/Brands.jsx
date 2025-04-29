@@ -8,7 +8,7 @@ const Brands = () => {
     <div className="bg-primary3 pt-[144px] pb-[100px]">
       <div>
         <section className="container">
-          <div className="mx-auto w-[500px] w-">
+          <div className="mx-auto w-[500px] ">
             <div className="flex items-center gap-x-3.5 justify-center">
               <div className="w-[40px] h-[1px] bg-primary2"></div>
               <div>

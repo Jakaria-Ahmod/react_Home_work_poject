@@ -32,8 +32,8 @@ const Works = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-[30px] mt-[50px] rounded-[5px] overflow-hidden">
-            {workdata.map((item, indx) => (
-              <div>
+            {workdata.map((item, index) => (
+              <div key={index}>
                 <div>
                   <div>
                     <div className="w-[570px] h-[321px]">

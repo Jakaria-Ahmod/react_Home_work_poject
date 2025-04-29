@@ -150,7 +150,7 @@ const Portfolio = () => {
                 <button
                   onClick={handleNextPage}
                   disabled={currentPage === totalPages}
-                  className="w-[37px] h-[29px] bg-white text-black rounded-[5px] text-[18px] hover:bg-opacity-80 disabled:opacity-40 transition"
+                  className="w-[37px] h-[29px] bg-white  text-black rounded-[5px] text-[18px] hover:bg-opacity-80 disabled:opacity-40 transition"
                 >
                   &#8594;
                 </button>
