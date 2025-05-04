@@ -8,7 +8,6 @@ import './App.css';
 import Home from './pages/Home/Home';
 import AllCompo from './Layout/AllCompo';
 import AboutCompo from './pages/components/AboutCompo';
-import ServiceCom from './pages/components/servicecom/serviceCom';
 import Portfolio from './pages/components/portfolio/Portfolio';
 import TestimonialCompo from './pages/components/testimonial/TestimonialCompo';
 import Pricing from './pages/components/Pricing/Pricing';
@@ -17,6 +16,7 @@ import Blog from './pages/allpages/blog/Blog';
 import Contact from './pages/components/Contact/Contact';
 import Error from './pages/components/Error/Error';
 import 'swiper/css';
+import Service from './pages/allpages/service/Service';
 
 function App() {
   const router = createBrowserRouter(
@@ -24,7 +24,7 @@ function App() {
       <Route element={<Home></Home>}>
         <Route path="/" element={<AllCompo></AllCompo>}></Route>
         <Route path="/about" element={<AboutCompo></AboutCompo>}></Route>
-        <Route path="/services" element={<ServiceCom></ServiceCom>}></Route>
+        <Route path="/services" element={<Service></Service>}></Route>
         <Route path="/works" element={<Portfolio></Portfolio>}></Route>
         <Route path="/pricing" element={<Pricing></Pricing>}></Route>
         <Route path="/fqa" element={<Acoridon></Acoridon>}></Route>
