@@ -6,7 +6,7 @@ import {
 } from 'react-router';
 import './App.css';
 import Home from './pages/Home/Home';
-import AllCompo from './Layout/allCompo';
+import AllCompo from './Layout/AllCompo';
 import AboutCompo from './pages/components/AboutCompo';
 import ServiceCom from './pages/components/servicecom/serviceCom';
 import Portfolio from './pages/components/portfolio/Portfolio';
