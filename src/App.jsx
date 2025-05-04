@@ -16,7 +16,7 @@ import Blog from './pages/allpages/blog/Blog';
 import Contact from './pages/components/Contact/Contact';
 import Error from './pages/components/Error/Error';
 import 'swiper/css';
-import Service from './pages/allpages/service/Service';
+import ServiceCom from './pages/components/servicecom/ServiceCom';
 
 function App() {
   const router = createBrowserRouter(
@@ -24,7 +24,7 @@ function App() {
       <Route element={<Home></Home>}>
         <Route path="/" element={<AllCompo></AllCompo>}></Route>
         <Route path="/about" element={<AboutCompo></AboutCompo>}></Route>
-        <Route path="/services" element={<Service></Service>}></Route>
+        <Route path="/services" element={<ServiceCom></ServiceCom>}></Route>
         <Route path="/works" element={<Portfolio></Portfolio>}></Route>
         <Route path="/pricing" element={<Pricing></Pricing>}></Route>
         <Route path="/fqa" element={<Acoridon></Acoridon>}></Route>
