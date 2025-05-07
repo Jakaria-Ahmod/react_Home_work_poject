@@ -33,128 +33,106 @@ const Portfolio = () => {
   return (
     <div>
       <section>
-        <div>
-          <div className="bg-primary1">
-            <div className="flex items-center justify-center pb-[100px]">
-              <div>
-                <div className="flex items-center justify-center gap-x-3.5">
-                  <div className="w-[40px] h-[1px] bg-primary2"></div>
-                  <div>
-                    <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                      Our Portfolio
-                    </span>
-                  </div>
-                </div>
-                <h2 className="text-center font-Roboto_Condensed text-[96px] font-bold leading-[101px] text-white">
+        <div className="bg-primary1">
+          <div className="flex items-center justify-center pb-[60px] md:pb-[100px] px-4">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-x-3.5 mb-2">
+                <div className="w-[40px] h-[1px] bg-primary2"></div>
+                <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
                   Our Portfolio
-                </h2>
-                <div className="flex items-center justify-center gap-x-[20px] mt-[20px]">
-                  <Link to="/">
-                    <IoHome size={13} color="white" />
-                  </Link>
-                  <Link
-                    className="text-white text-[14px] font-bold uppercase"
-                    to="/"
-                  >
-                    Home
-                  </Link>
-                  <FaChevronRight size={13} color="white" />
-                  <Link
-                    className="text-white text-[14px] font-bold uppercase"
-                    to="/works"
-                  >
-                    Our Portfolio
-                  </Link>
-                </div>
+                </span>
+              </div>
+              <h2 className="text-[40px] sm:text-[64px] md:text-[96px] font-Roboto_Condensed font-bold text-white leading-tight">
+                Our Portfolio
+              </h2>
+              <div className="flex flex-wrap items-center justify-center gap-x-[10px] sm:gap-x-[20px] mt-[20px] text-white text-[14px] font-bold uppercase">
+                <Link to="/">
+                  <IoHome size={14} />
+                </Link>
+                <Link to="/">Home</Link>
+                <FaChevronRight size={12} />
+                <Link to="/works">Our Portfolio</Link>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Works Section */}
-          <div className="bg-primary3">
-            <div className="container pt-[100px] pb-[41px]">
-              <div className="flex items-center gap-x-3.5">
+        <div className="bg-primary3">
+          <div className="container pt-[60px] md:pt-[100px] pb-[41px] px-4 md:px-0">
+            <div className="mb-4">
+              <div className="flex items-center gap-x-3.5 mb-2">
                 <div className="w-[40px] h-[1px] bg-primary2"></div>
-                <div>
-                  <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
-                    works
-                  </span>
-                </div>
+                <span className="text-primary2 font-Roboto_Condensed text-[14px] uppercase">
+                  works
+                </span>
               </div>
-              <h3 className="text-[72px] font-Roboto_Condensed font-bold leading-[72px] text-white">
+              <h3 className="text-[36px] sm:text-[48px] md:text-[72px] font-Roboto_Condensed font-bold leading-tight text-white">
                 Check Out Our Latest Works
               </h3>
-              <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mt-[20px]">
+              <p className="font-Inter text-sm sm:text-base font-normal leading-[24px] text-primary4 mt-[10px] max-w-[700px]">
                 Proin et magna blandit arcu pellentesque scelerisque sit amet a
                 sapien aenean
               </p>
+            </div>
 
-              {/* Portfolio Items */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] mt-[50px] rounded-[5px] overflow-hidden">
-                {currentItems.map((item, indx) => (
-                  <div key={indx}>
-                    <div className="w-full h-[321px]">
-                      <img
-                        src={item.img}
-                        alt="img"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="relative">
-                      <div className="px-[5px] bg-gray-700 w-full absolute top-[-100px] pl-[30px] py-[20px]">
-                        <p className="text-[36px] font-bold leading-[40px] font-Roboto_Condensed text-white">
-                          {item.movieName}
-                        </p>
-                        <div className="flex items-center gap-x-[20px]">
-                          <p className="font-Inter text-base font-normal leading-[24px] text-white">
-                            {item.title}
-                          </p>
-                          <p className="font-Roboto_Condensed text-[20px] font-bold text-white">
-                            {item.year}
-                          </p>
-                        </div>
-                      </div>
+            {/* Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[30px] mt-[30px]">
+              {currentItems.map((item, indx) => (
+                <div
+                  key={indx}
+                  className="rounded-[5px] overflow-hidden relative group"
+                >
+                  <img
+                    src={item.img}
+                    alt="portfolio-img"
+                    className="w-full h-[300px] object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-50 px-5 py-4">
+                    <p className="text-[20px] sm:text-[28px] font-bold font-Roboto_Condensed text-white">
+                      {item.movieName}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-x-3 mt-1">
+                      <p className="text-white font-Inter text-sm sm:text-base">
+                        {item.title}
+                      </p>
+                      <p className="text-white font-Roboto_Condensed text-sm sm:text-[18px] font-semibold">
+                        {item.year}
+                      </p>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
 
-              {/* Pagination Buttons */}
-              <div className="flex justify-end items-center mt-10 space-x-2">
-                {/* Prev Button */}
+            {/* Pagination */}
+            <div className="flex justify-center md:justify-end items-center mt-10 space-x-2">
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className="w-[37px] h-[29px] bg-white text-black rounded hover:bg-opacity-80 disabled:opacity-40 transition"
+              >
+                &#8592;
+              </button>
+              {Array.from({ length: totalPages }, (_, idx) => (
                 <button
-                  onClick={handlePrevPage}
-                  disabled={currentPage === 1}
-                  className="w-[37px] h-[29px] bg-white text-black rounded-[5px]  hover:bg-opacity-80 disabled:opacity-40 transition"
+                  key={idx}
+                  onClick={() => handlePageClick(idx + 1)}
+                  className={`w-[37px] h-[29px] text-sm rounded flex items-center justify-center font-semibold transition ${
+                    currentPage === idx + 1
+                      ? 'bg-primary4 text-white'
+                      : 'bg-white text-black'
+                  }`}
                 >
-                  &#8592;
+                  {idx + 1}
                 </button>
-
-                {/* Page Numbers */}
-                {Array.from({ length: totalPages }, (_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handlePageClick(idx + 1)}
-                    className={`w-[37px] h-[29px]  text-black rounded-[5px] flex items-center justify-center font-semibold transition
-                    ${
-                      currentPage === idx + 1
-                        ? 'bg-primary4 text-white'
-                        : 'bg-white text-black'
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                ))}
-
-                {/* Next Button */}
-                <button
-                  onClick={handleNextPage}
-                  disabled={currentPage === totalPages}
-                  className="w-[37px] h-[29px] bg-white  text-black rounded-[5px] text-[18px] hover:bg-opacity-80 disabled:opacity-40 transition"
-                >
-                  &#8594;
-                </button>
-              </div>
+              ))}
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className="w-[37px] h-[29px] bg-white text-black rounded hover:bg-opacity-80 disabled:opacity-40 transition"
+              >
+                &#8594;
+              </button>
             </div>
           </div>
         </div>

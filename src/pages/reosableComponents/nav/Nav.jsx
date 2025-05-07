@@ -15,7 +15,7 @@ const Nav = () => {
     <div className="bg-primary1 pb-[100px]">
       <div className="container">
         <header>
-          <div className="flex items-center justify-between py-[30px]">
+          <div className="flex items-center justify-between flex-col gap-y-[16px] md:gap-y-0 md:flex-row  gap-x-4 xl:gap-x-0 py-[30px]">
             <div className="flex items-center gap-x-8">
               <FaFacebookF color="white" size={20} className="cursor-pointer" />
               <IoLogoTwitter
@@ -44,7 +44,7 @@ const Nav = () => {
             </div>
             <div className="flex items-center gap-x-[30px]">
               <div className="flex items-center gap-x-3">
-                <MdPhone size={25} color="white" className="cursor-pointer" />
+                <MdPhone size={20} color="white" className="cursor-pointer" />
                 <span className="font-Roboto_Condensed text-[14px] font-normal uppercase text-white">
                   (+021) 345 678 910
                 </span>
@@ -63,7 +63,7 @@ const Nav = () => {
           </div>
         </header>
         <nav className="border-t border-[#989AA9] flex items-center justify-center">
-          <ul className="flex items-center gap-x-[60px] mt-[20px] relative">
+          <ul className="flex flex-col md:flex-row gap-y-2.5 md:gap-y-0 items-center gap-x-[60px] mt-[20px] relative">
             {menuItem.map((item, index) => (
               <div key={index} className="relative group">
                 <Link
@@ -72,8 +72,6 @@ const Nav = () => {
                 >
                   {item.name}
                 </Link>
-
-                {/* Dropdown menu for Pages */}
                 {item.name === 'pages' && (
                   <div className="absolute top-[16px] w-[132px]  left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 mt-2 z-10 min-h-[230px] px-[20px]">
                     {item.drop.map((item, index) => (

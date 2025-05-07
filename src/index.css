@@ -12,11 +12,48 @@
   --color-primary2: #ff5e3a;
   --color-primary3: #232639;
   --color-primary4: #82869a;
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
 }
 
 @utility container {
   width: 1173px;
   margin: 0 auto;
+}
+
+@media (max-width: 576.99px) {
+  .container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .container {
+    max-width: 97%;
+    margin: 0 auto;
+  }
 }
 
 @theme inline {

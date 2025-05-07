@@ -18,7 +18,7 @@ const Footer = () => {
       <footer>
         <div className="bg-[#11121E]">
           <div className="container">
-            <div className="flex items-center py-[50px]">
+            {/* <div className="flex items-center py-[50px]">
               <div className="flex items-center gap-x-[60px]">
                 <h3 className="font-Roboto_Condensed text-[36px] font-bold leading-[40px] text-white">
                   Subscribe
@@ -41,11 +41,11 @@ const Footer = () => {
                   </button>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="border border-primary4"></div>
           <div className="container">
-            <div className="py-[50px] flex gap-x-[50px]">
+            <div className="py-[50px] flex flex-col md:flex-row gap-x-[50px] lg:gap-x-[30px]">
               <div className="w-[300px]">
                 <div>
                   <img src={footerlogo} alt="img" />
@@ -56,12 +56,12 @@ const Footer = () => {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-[auto_auto_auto_auto] justify-between gap-x-[50px]">
-                <div className="w-[263px]">
+              <div className="grid grid-cols-2 mt-[15px] md:mt-0 md:grid-cols-3 justify-center lg:grid-cols-[auto_auto] md:justify-between md:gap-x-[50px] gap-2 xl:grid-cols-[auto_auto_auto_auto]">
+                <div className="w-[263px] p-3 md:p-0">
                   <h3 className="text-white font-Roboto_Condensed font-bold text-[20px] ">
                     Keep in touch
                   </h3>
-                  <p className="font-Inter text-[16px] font-normal text-primary4 leading-[24px] mb-[10px]">
+                  <p className="font-Inter text-[16px] md:text-[15px] md:w-[150px] font-normal text-primary4 leading-[24px] mb-[10px]">
                     768 Market Street San Francisco, CA 64015, United States
                   </p>
                   <p className="font-Inter text-[16px] font-normal text-primary4 leading-[24px] mb-[10px]">
@@ -71,7 +71,7 @@ const Footer = () => {
                     (+021) 345 678 910
                   </p>
                 </div>
-                <div className="text-white">
+                <div className="text-white p-3 md:p-0">
                   <h4 className="text-white font-Roboto_Condensed text-[20px] font-bold  mb-[20px]">
                     Services
                   </h4>
@@ -86,7 +86,7 @@ const Footer = () => {
                     </div>
                   ))}
                 </div>
-                <div className="text-white">
+                <div className="text-white p-3 md:p-0">
                   <h4 className="text-white font-Roboto_Condensed text-[20px] font-bold  mb-[20px]">
                     Quick links
                   </h4>
@@ -101,7 +101,7 @@ const Footer = () => {
                     </div>
                   ))}
                 </div>
-                <div className="z-50">
+                <div className="z-50 p-3 md:p-0">
                   <h4 className="text-white font-Roboto_Condensed text-[20px] font-bold  mb-[20px]">
                     Supports
                   </h4>

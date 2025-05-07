@@ -6,8 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-// import required modules
+// Import required modules
 import { FreeMode, Pagination } from 'swiper/modules';
+
 const Blog = () => {
   return (
     <div className="bg-primary3 pt-[50px] pb-[100px]">
@@ -27,18 +28,19 @@ const Blog = () => {
                 Our Latest Blog
               </h5>
               <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mt-[30px] mb-[30px]">
-                Proin et magna blandit arcu pellentes scelerisque sit amet a
+                Proin et magna blandit arcu pellentesque scelerisque sit amet a
                 sapien. Aenean purus nunc cursus in ante
               </p>
               <div>
                 <button className="py-[17px] px-[25px] bg-primary2 text-white text-[14px] font-bold uppercase font-Roboto_Condensed cursor-pointer">
-                  learn more
+                  Learn More
                 </button>
               </div>
             </div>
 
+            {/* Swiper Component with Responsive Breakpoints */}
             <Swiper
-              slidesPerView={3}
+              slidesPerView={1} // Default to 1 slide per view
               spaceBetween={30}
               freeMode={true}
               loop={true}
@@ -47,33 +49,36 @@ const Blog = () => {
               }}
               modules={[FreeMode, Pagination]}
               className="mySwiper"
+              breakpoints={{
+                640: {
+                  slidesPerView: 2, // Show 2 slides for small screens
+                },
+                1024: {
+                  slidesPerView: 3, // Show 3 slides for larger screens
+                },
+              }}
             >
-              <div className="grid grid-cols-3 gap-x-[30px]">
-                {blogData.map((item, index) => (
-                  <SwiperSlide>
-                    <div className="w-[258px]">
-                      <div
-                        className="w-[258px] h-[258px] rounded-[5px] overflow-hidden"
-                        key={index}
-                      >
-                        <img
-                          src={item.img}
-                          alt="img"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-Roboto_Condensed text-[24px] font-bold text-white leading-[30px] mt-[20px] mb-[10px]">
-                          {item.title}
-                        </h3>
-                        <p className="font-Inter text-base font-normal text-primary4 leading-[24px]">
-                          {item.date}
-                        </p>
-                      </div>
+              {blogData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="w-[258px]">
+                    <div className="w-[258px] h-[258px] rounded-[5px] overflow-hidden">
+                      <img
+                        src={item.img}
+                        alt="img"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                  </SwiperSlide>
-                ))}
-              </div>
+                    <div>
+                      <h3 className="font-Roboto_Condensed text-[24px] font-bold text-white leading-[30px] mt-[20px] mb-[10px]">
+                        {item.title}
+                      </h3>
+                      <p className="font-Inter text-base font-normal text-primary4 leading-[24px]">
+                        {item.date}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </section>
