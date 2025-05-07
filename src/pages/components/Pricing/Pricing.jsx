@@ -100,15 +100,62 @@ const Pricing = () => {
                     <p className="text-white font-Roboto_Condensed font-bold uppercase mt-[30px] mb-[20px] group-hover:text-white transition duration-200">
                       {item.includes}
                     </p>
-                    <div className="flex items-center justify-between border-b border-dotted mb-[20px]">
+                    <div className="flex items-center justify-between  border-b border-dotted mb-[20px]">
                       <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
                         {item.Pre_production}
                       </p>
-                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white uppercase group-hover:text-white transition duration-200">
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
                         {item.limited}
                       </p>
                     </div>
-                    {/* Other similar blocks for production, post-production, etc. */}
+                    <div className="flex items-center justify-between  border-b border-dotted  mb-[20px]">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.production}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.limited}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between  border-b border-dotted  mb-[20px]">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.post_production}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.limited}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between  border-b border-dotted  mb-[20px]">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.crew_Members}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.crew_MembersMan}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between  border-b border-dotted  mb-[20px]">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.equipment}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.equipmentName}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between  border-b border-dotted  mb-[20px]">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.deliveryTime}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.delivery_Time}
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="font-Inter text-base font-normal leading-[24px] text-primary4 mb-[10px] group-hover:text-white transition duration-200">
+                        {item.Revisions}
+                      </p>
+                      <p className="font-Roboto_Condensed text-[14px] font-bold text-white  uppercase group-hover:text-white transition duration-200">
+                        {item.RevisionsMan}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

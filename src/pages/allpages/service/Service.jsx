@@ -8,7 +8,7 @@ const Service = () => {
       <div className="container px-4 md:px-0">
         <section className="relative">
           {/* Background Shape */}
-          <div className="absolute top-[-150px] right-[-50px] w-[200px] md:w-[300px] z-0">
+          <div className="absolute hidden lg:block top-[-150px] right-[-50px] w-[200px] md:w-[300px] z-0">
             <img src={serviceShep} alt="img" className="w-full" />
           </div>
 

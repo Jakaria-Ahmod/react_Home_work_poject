@@ -93,7 +93,7 @@ const AboutCompo = () => {
         </div>
         <PhotoGrapi></PhotoGrapi>
         <Collaborations></Collaborations>
-        {/* <Testimonials> </Testimonials> */}
+        <Testimonials> </Testimonials>
       </section>
     </motion.div>
   );

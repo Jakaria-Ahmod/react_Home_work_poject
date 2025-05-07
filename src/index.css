@@ -177,3 +177,10 @@
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: red !important;
 }
+
+.swiper-pagination {
+  bottom: 0px !important; /* নিচে নামাবে */
+  margin-top: 40px; /* স্লাইডের সাথে দূরত্ব */
+  position: relative !important; /* Default absolute কে override করবে */
+  text-align: center;
+}

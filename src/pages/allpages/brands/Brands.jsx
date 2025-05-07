@@ -5,85 +5,78 @@ import pratnershep from '../../../assets/img/partnershep.png';
 
 const Brands = () => {
   return (
-    <div className="bg-primary3 pt-[60px] sm:pt-[144px] pb-[60px] sm:pb-[100px]">
-      <div>
-        <section className="container">
-          {/* Header Section */}
-          <div className="mx-auto w-[90%] sm:w-[500px]">
-            <div className="flex items-center gap-x-3.5 justify-center">
-              <div className="w-[30px] sm:w-[40px] h-[1px] bg-primary2"></div>
-              <div>
+    <div className="bg-primary3 pt-[60px] sm:pt-[100px] pb-[60px] sm:pb-[100px]">
+      <section className="container px-4 sm:px-6 lg:px-0">
+        {/* Header Section */}
+        <div className="mx-auto text-center max-w-[90%] sm:max-w-[500px]">
+          <div className="flex items-center justify-center gap-x-3 mb-4">
+            <div className="w-[30px] sm:w-[40px] h-[1px] bg-primary2"></div>
+            <span className="text-primary2 font-Roboto_Condensed text-[12px] sm:text-[14px] uppercase">
+              partners
+            </span>
+          </div>
+          <h4 className="text-[28px] sm:text-[40px] font-Roboto_Condensed font-bold leading-[38px] sm:leading-[48px] text-white mt-[10px]">
+            Trusted by the Best Brands
+          </h4>
+        </div>
+
+        {/* Partners' Brands */}
+        <div className="flex gap-[100px] mt-[56px] mb-[100px] justify-center">
+          {barndimg.map((item, index) => (
+            <div>
+              <img src={item.img} alt="" />
+            </div>
+          ))}
+        </div>
+
+        {/* Partner Image (Optional Decoration) */}
+        <div className="relative hidden">
+          <div className="absolute top-[-80px] sm:top-[-120px] left-[-20px] sm:left-[-80px] z-10 hidden md:block">
+            <img
+              src={pratnershep}
+              alt="Partner"
+              className="w-[120px] sm:w-[180px]"
+            />
+          </div>
+        </div>
+
+        {/* Banner Image */}
+        <div className="w-full h-[220px] sm:h-[350px] md:h-[500px] rounded overflow-hidden mb-12">
+          <img
+            src={partnerBannerImg}
+            alt="Partner Banner"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Directors Section */}
+        <div className="relative w-full bg-[#11121E] rounded-[5px] p-5 sm:p-10 md:p-[50px] -mt-[100px] sm:-mt-[120px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-x-10">
+            <div>
+              <div className="flex items-center gap-x-3 mb-4">
+                <div className="w-[30px] sm:w-[40px] h-[1px] bg-primary2"></div>
                 <span className="text-primary2 font-Roboto_Condensed text-[12px] sm:text-[14px] uppercase">
-                  partners
+                  directors
                 </span>
               </div>
-            </div>
-            <h4 className="text-[32px] sm:text-[45px] font-Roboto_Condensed font-bold leading-[40px] sm:leading-[50px] text-white mt-[20px] sm:mt-[0]">
-              Trusted by the Best Brands
-            </h4>
-          </div>
-
-          {/* Partners' Brands */}
-          <div className="flex gap-[100px] mt-[56px] mb-[100px] justify-center">
-            {barndimg.map((item, index) => (
-              <div>
-                <img src={item.img} alt="" />
-              </div>
-            ))}
-          </div>
-
-          {/* Partner Image and Section */}
-          <div className="relative hidden">
-            <div className="absolute top-[-100px] sm:top-[-150px] left-[-40px] sm:left-[-100px] z-20">
-              <img
-                src={pratnershep}
-                alt="Partner"
-                className="w-[150px] sm:w-[250px]"
-              />
-            </div>
-          </div>
-
-          {/* Banner with Director Info */}
-          <div>
-            <div className="w-full sm:w-[1170px] h-[300px] sm:h-[500px]">
-              <img
-                src={partnerBannerImg}
-                alt="Partner Banner"
-                className="w-full h-full object-cover"
-              />
+              <h3 className="font-Roboto_Condensed text-[28px] sm:text-[48px] font-bold leading-[38px] sm:leading-[60px] text-white">
+                Meet Our Video Directors
+              </h3>
             </div>
 
-            <div className="relative">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 absolute top-[-120px] sm:top-[-150px] w-full sm:w-[1070px] p-[30px] sm:p-[50px] bg-[#11121E] rounded-[3px]">
-                <div>
-                  <div className="flex items-center gap-x-3.5 mb-[20px] sm:mb-[30px]">
-                    <div className="w-[30px] sm:w-[40px] h-[1px] bg-primary2"></div>
-                    <div>
-                      <span className="text-primary2 font-Roboto_Condensed text-[12px] sm:text-[14px] uppercase">
-                        directors
-                      </span>
-                    </div>
-                  </div>
-                  <h3 className="font-Roboto_Condensed text-[32px] sm:text-[72px] font-bold leading-[40px] sm:leading-[72px] text-white">
-                    Meet Our Video Directors
-                  </h3>
-                </div>
-
-                <div className="w-full sm:w-[441px]">
-                  <p className="font-Roboto_Condensed text-[16px] sm:text-[24px] font-bold text-white leading-[24px] sm:leading-[30px] pr-[30px] sm:pr-[150px] mb-[20px] sm:mb-[30px]">
-                    Our team is made up of experienced and talented filmmakers
-                    who share a common goal.
-                  </p>
-                  <p className="font-Inter text-[14px] sm:text-[16px] font-normal leading-[24px] text-[#82869A] mt-[20px] sm:mt-[30px]">
-                    Proin et magna blandit arcu pellentesque scelerisque sit
-                    amet a sapien. Aenean purus nunc, cursus in ante in.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <p className="font-Roboto_Condensed text-[15px] sm:text-[20px] font-bold text-white leading-[24px] mb-4">
+                Our team is made up of experienced and talented filmmakers who
+                share a common goal.
+              </p>
+              <p className="font-Inter text-[14px] sm:text-[16px] text-[#82869A] leading-[24px]">
+                Proin et magna blandit arcu pellentesque scelerisque sit amet a
+                sapien. Aenean purus nunc, cursus in ante in.
+              </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
