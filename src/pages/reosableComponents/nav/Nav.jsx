@@ -30,7 +30,7 @@ const Nav = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full z-50 pb-[82px] transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 lg:pb-[82px] transition-all duration-300 ${
           isScrolled
             ? 'bg-primary1 bg-opacity-90 backdrop-blur-md shadow-md'
             : 'bg-primary1'
@@ -38,54 +38,63 @@ const Nav = () => {
       >
         <div className="container px-4 md:px-0">
           {/* Top Bar */}
-          <header className="flex flex-col md:flex-row items-center justify-between gap-y-6 py-6">
-            {/* Social Icons */}
-            <div className="flex items-center gap-x-4 order-2 md:order-1">
-              <FaFacebookF color="white" size={18} className="cursor-pointer" />
-              <IoLogoTwitter
-                color="white"
-                size={18}
-                className="cursor-pointer"
-              />
-              <PiInstagramLogoLight
-                color="white"
-                size={18}
-                className="cursor-pointer"
-              />
-              <AiOutlineYoutube
-                color="white"
-                size={18}
-                className="cursor-pointer"
-              />
-              <PiLinkedinLogo
-                color="white"
-                size={18}
-                className="cursor-pointer"
-              />
-            </div>
-
-            {/* Logo */}
-            <div className="order-1 md:order-2">
-              <img src={filmLogo} alt="Logo" className="w-[120px] md:w-auto" />
-            </div>
-
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row gap-4 items-center order-3">
-              <div className="flex items-center gap-x-2">
-                <MdPhone color="white" size={20} />
-                <span className="text-white text-sm font-Roboto_Condensed uppercase">
-                  (+021) 345 678 910
-                </span>
+          <div className="hidden md:block">
+            <header className="flex flex-col md:flex-row items-center justify-between gap-y-6 py-6">
+              {/* Social Icons */}
+              <div className="flex items-center gap-x-4 order-2 md:order-1">
+                <FaFacebookF
+                  color="white"
+                  size={18}
+                  className="cursor-pointer"
+                />
+                <IoLogoTwitter
+                  color="white"
+                  size={18}
+                  className="cursor-pointer"
+                />
+                <PiInstagramLogoLight
+                  color="white"
+                  size={18}
+                  className="cursor-pointer"
+                />
+                <AiOutlineYoutube
+                  color="white"
+                  size={18}
+                  className="cursor-pointer"
+                />
+                <PiLinkedinLogo
+                  color="white"
+                  size={18}
+                  className="cursor-pointer"
+                />
               </div>
-              <div className="flex items-center gap-x-2">
-                <MdOutlineMailOutline color="white" size={20} />
-                <span className="text-white text-sm font-Roboto_Condensed uppercase">
-                  info@filmina.com
-                </span>
-              </div>
-            </div>
-          </header>
 
+              {/* Logo */}
+              <div className="order-1 md:order-2">
+                <img
+                  src={filmLogo}
+                  alt="Logo"
+                  className="w-[120px] md:w-auto"
+                />
+              </div>
+
+              {/* Contact Info */}
+              <div className="flex flex-col md:flex-row gap-4 items-center order-3">
+                <div className="flex items-center gap-x-2">
+                  <MdPhone color="white" size={20} />
+                  <span className="text-white text-sm font-Roboto_Condensed uppercase">
+                    (+021) 345 678 910
+                  </span>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  <MdOutlineMailOutline color="white" size={20} />
+                  <span className="text-white text-sm font-Roboto_Condensed uppercase">
+                    info@filmina.com
+                  </span>
+                </div>
+              </div>
+            </header>
+          </div>
           {/* Navigation Menu */}
           <nav className="relative">
             {/* Toggle Button for Mobile */}
@@ -135,7 +144,7 @@ const Nav = () => {
       </div>
 
       {/* Padding below header to avoid content hiding */}
-      <div className="pt-[200px]"></div>
+      <div className=" pt-[40px] lg:pt-[200px]"></div>
     </>
   );
 };
